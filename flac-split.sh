@@ -2,6 +2,11 @@
 # Smart portable FLAC splitter/tagger/renamer
 # Handles detoxed filenames gracefully
 
+# Requires
+# ffmpeg installed
+# cuetools installed
+# shntool installed
+
 # Step 0: Find cue file
 CUE=$(ls *.cue 2>/dev/null | head -n1)
 if [[ -z "$CUE" ]]; then
