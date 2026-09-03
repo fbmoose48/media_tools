@@ -1,6 +1,10 @@
 #!/bin/bash
 
 # Recursively find all .m4a files and convert them to FLAC
+
+# Requires
+# ffmpeg installed
+
 find . -type f -name "*.m4a" | while read -r f; do
     echo "Converting: $f"
     ffmpeg -i "$f" -c:a flac "${f%.m4a}.flac"
